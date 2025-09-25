@@ -119,21 +119,21 @@ python src/evaluate.py --model_path results/models/vit_best.pth --test_dir data/
 4. **Dataset Download:** `git clone https://github.com/ieee8023/covid-chestxray-dataset.git`
 5. **Code Verification:** Showing all components work together
 
-### Expected Demo Results
+### Demo Results
 **Demo Script Output:**
 - Package Installation: PASS (all required packages found)
 - Vision Transformer Model: PASS (model loads and processes input)
 - Data Processing: PASS (patient-level splitting works correctly)
 - Dataset Availability: PASS after download (COVID-19 dataset ready)
 
-**What This Proves:**
+**What This Shows:**
 - Code runs without errors
 - All dependencies work correctly
 - Data processing prevents medical data leakage
 - Vision Transformer model functions properly
 
-### Realistic Student Approach
-**My Goals:**
+### My Approach
+**Goals:**
 - Show the code actually works
 - Demonstrate proper setup process
 - Prove error-free execution as required
