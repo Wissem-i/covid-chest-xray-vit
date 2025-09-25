@@ -6,7 +6,8 @@ Vision Transformer implementation for COVID-19 vs Pneumonia classification using
 
 
 
-## Dataset## 🎯 Assignment Requirements Met
+## Dataset
+## 🎯 Assignment Requirements Met
 
 
 
