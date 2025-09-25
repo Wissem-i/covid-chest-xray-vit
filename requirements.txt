@@ -1,0 +1,17 @@
+torchtorch>=1.12.0
+
+torchvisiontorchvision>=0.13.0
+
+timmtimm>=0.6.12
+
+pandaspandas>=1.5.0
+
+scikit-learnnumpy>=1.21.0
+
+numpypillow>=9.2.0
+
+matplotlibscikit-learn>=1.1.0
+
+pillowmatplotlib>=3.5.0
+seaborn>=0.11.0
+tqdm>=4.64.0
