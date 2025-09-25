@@ -4,3 +4,6 @@ __pycache__/
 .DS_Store
 data/
 *.log
+Week1_*.md
+Week\ 1_*.pdf
+Week\ 1_*.txt
