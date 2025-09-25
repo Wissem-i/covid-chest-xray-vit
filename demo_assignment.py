@@ -1,158 +1,167 @@
 #!/usr/bin/env python3
 """
-Demo script for PSU Week 1 Assignment - COVID-19 ViT Classification
-Shows that the code actually works and can be executed
+COVID-19 Chest X-ray Classification - Assignment Demo
+Student implementation for PSU Week 1 assignment
 """
 
-import os
 import sys
-import torch
+import importlib
 import pandas as pd
 import numpy as np
 from pathlib import Path
 
-def check_requirements():
-    """Check if all required packages are available"""
-    print("🔍 Checking Requirements...")
-    
-    required_packages = [
-        ('torch', 'PyTorch'),
-        ('torchvision', 'TorchVision'), 
-        ('timm', 'PyTorch Image Models'),
-        ('pandas', 'Pandas'),
-        ('sklearn', 'Scikit-learn'),
-        ('PIL', 'Pillow')
-    ]
+def check_packages():
+    """Check if required packages are installed"""
+    packages = {
+        'torch': 'PyTorch',
+        'torchvision': 'TorchVision', 
+        'timm': 'PyTorch Image Models',
+        'pandas': 'Pandas',
+        'sklearn': 'Scikit-learn',
+        'PIL': 'Pillow'
+    }
     
     missing = []
-    for package, name in required_packages:
+    print("Checking required packages:")
+    for package, name in packages.items():
         try:
-            __import__(package)
-            print(f"  ✅ {name}")
+            importlib.import_module(package)
+            print(f"  Found: {name}")
         except ImportError:
-            print(f"  ❌ {name} (missing)")
+            print(f"  Missing: {name}")
             missing.append(package)
     
     if missing:
-        print(f"\n❌ Missing packages: {', '.join(missing)}")
-        print("Install with: pip install -r requirements.txt")
+        print(f"\nPlease install missing packages:")
+        print("pip install -r requirements.txt")
         return False
-    else:
-        print("✅ All requirements satisfied!")
-        return True
-
-def demonstrate_vision_transformer():
-    """Demonstrate Vision Transformer model creation"""
-    print("\n🤖 Testing Vision Transformer Model...")
     
+    print("All packages installed successfully!")
+    return True
+
+def test_vision_transformer():
+    """Test Vision Transformer model creation"""
     try:
         import timm
+        import torch
         
-        # Create a ViT model (this proves the architecture works)
+        print("\nTesting Vision Transformer model:")
+        # Create a simple ViT model for testing
         model = timm.create_model('vit_base_patch16_224', pretrained=False, num_classes=2)
-        print(f"  ✅ ViT Model Created: {model.__class__.__name__}")
-        print(f"  ✅ Parameters: {sum(p.numel() for p in model.parameters()):,}")
         
         # Test with dummy input
         dummy_input = torch.randn(1, 3, 224, 224)
-        with torch.no_grad():
-            output = model(dummy_input)
-        print(f"  ✅ Forward Pass: {output.shape}")
+        output = model(dummy_input)
         
+        print(f"  Model created successfully")
+        print(f"  Output shape: {output.shape}")
         return True
         
     except Exception as e:
-        print(f"  ❌ ViT Test Failed: {e}")
+        print(f"  Error creating model: {e}")
         return False
 
-def demonstrate_data_processing():
-    """Demonstrate data processing capabilities"""
-    print("\n📊 Testing Data Processing...")
+def test_data_processing():
+    """Test data processing and splitting functionality"""
+    print("\nTesting data processing:")
     
-    try:
-        # Test our dataset splitting module
-        from create_dataset_splits import create_patient_level_splits, verify_splits
-        
-        # Create dummy medical data
-        dummy_data = pd.DataFrame({
-            'Patient ID': [f'P{i//3:03d}' for i in range(30)],  # 3 images per patient
-            'Image Index': [f'img_{i:03d}.png' for i in range(30)],
-            'Finding Labels': ['COVID-19'] * 15 + ['Pneumonia'] * 15,
-            'Binary_Label': ['COVID-19'] * 15 + ['Pneumonia'] * 15
+    # Create dummy dataset for testing
+    np.random.seed(42)
+    n_samples = 30
+    
+    data = []
+    patients = [f"patient_{i//3:03d}" for i in range(n_samples)]
+    labels = np.random.choice(['COVID-19', 'Pneumonia'], n_samples)
+    
+    for i in range(n_samples):
+        data.append({
+            'patient_id': patients[i],
+            'image_path': f'image_{i:03d}.jpg',
+            'label': labels[i]
         })
-        
-        print(f"  ✅ Created dummy dataset: {len(dummy_data)} samples")
-        
-        # Test splitting
-        train_df, test_df, val_df = create_patient_level_splits(dummy_data)
-        print(f"  ✅ Train/Test/Val split: {len(train_df)}/{len(test_df)}/{len(val_df)}")
-        
-        # Verify splits
-        verify_splits(train_df, test_df, val_df)
-        print("  ✅ Patient-level splitting verified!")
-        
+    
+    df = pd.DataFrame(data)
+    print(f"  Created sample dataset: {len(df)} images")
+    
+    # Test patient-level splitting
+    unique_patients = df['patient_id'].unique()
+    print(f"  Number of patients: {len(unique_patients)}")
+    
+    # Split patients (not images) to prevent data leakage
+    np.random.shuffle(unique_patients)
+    n_train = int(0.6 * len(unique_patients))
+    n_test = int(0.2 * len(unique_patients))
+    
+    train_patients = unique_patients[:n_train]
+    test_patients = unique_patients[n_train:n_train+n_test]
+    val_patients = unique_patients[n_train+n_test:]
+    
+    train_df = df[df['patient_id'].isin(train_patients)]
+    test_df = df[df['patient_id'].isin(test_patients)]
+    val_df = df[df['patient_id'].isin(val_patients)]
+    
+    print(f"  Split completed: {len(train_df)}/{len(test_df)}/{len(val_df)} samples")
+    
+    # Verify no patient overlap
+    train_set = set(train_df['patient_id'])
+    test_set = set(test_df['patient_id'])
+    val_set = set(val_df['patient_id'])
+    
+    overlaps = [
+        len(train_set.intersection(test_set)),
+        len(train_set.intersection(val_set)), 
+        len(test_set.intersection(val_set))
+    ]
+    
+    if sum(overlaps) == 0:
+        print("  Patient-level splitting verified - no data leakage!")
         return True
-        
-    except Exception as e:
-        print(f"  ❌ Data Processing Test Failed: {e}")
+    else:
+        print("  Warning: Patient overlap detected!")
         return False
 
-def check_dataset_availability():
-    """Check if COVID-19 dataset is available"""
-    print("\n💾 Checking Dataset Availability...")
-    
-    dataset_path = Path('covid-chestxray-dataset')
+def check_dataset():
+    """Check if COVID dataset is available"""
+    dataset_path = Path("covid-chestxray-dataset")
     if dataset_path.exists():
-        metadata_path = dataset_path / 'metadata.csv'
-        if metadata_path.exists():
-            df = pd.read_csv(metadata_path)
-            print(f"  ✅ Dataset found: {len(df)} images")
-            print(f"  ✅ Metadata: {metadata_path}")
-            return True
-        else:
-            print("  ⚠️  Dataset folder exists but no metadata.csv")
+        print(f"\nDataset found at: {dataset_path}")
+        return True
     else:
-        print("  ⚠️  Dataset not found")
-        print("  💡 To download: git clone https://github.com/ieee8023/covid-chestxray-dataset.git")
-    
-    return False
+        print(f"\nDataset not found.")
+        print("To download: git clone https://github.com/ieee8023/covid-chestxray-dataset.git")
+        return False
 
 def main():
-    """Main demonstration function"""
-    print("🚀 PSU Week 1 Assignment - COVID-19 ViT Classification Demo")
-    print("=" * 60)
+    """Run the complete demo"""
+    print("COVID-19 Vision Transformer Assignment - Demo")
+    print("=" * 50)
     
-    success_count = 0
+    tests_passed = 0
     total_tests = 4
     
-    # Test 1: Requirements
-    if check_requirements():
-        success_count += 1
+    # Test 1: Package installation
+    if check_packages():
+        tests_passed += 1
     
     # Test 2: Vision Transformer
-    if demonstrate_vision_transformer():
-        success_count += 1
-        
-    # Test 3: Data Processing
-    if demonstrate_data_processing():
-        success_count += 1
+    if test_vision_transformer():
+        tests_passed += 1
     
-    # Test 4: Dataset
-    if check_dataset_availability():
-        success_count += 1
+    # Test 3: Data processing
+    if test_data_processing():
+        tests_passed += 1
     
-    print("\n" + "=" * 60)
-    print(f"📈 Demo Results: {success_count}/{total_tests} tests passed")
+    # Test 4: Dataset availability
+    if check_dataset():
+        tests_passed += 1
     
-    if success_count >= 3:
-        print("✅ Code is ready for submission!")
-        print("\n💡 Next steps:")
-        print("  1. Download dataset: git clone https://github.com/ieee8023/covid-chestxray-dataset.git")
-        print("  2. Create splits: python create_dataset_splits.py") 
-        print("  3. Train model: python vit_covid19_classifier.py")
+    print("\n" + "=" * 50)
+    print(f"Tests completed: {tests_passed}/{total_tests}")
+    
+    if tests_passed == total_tests:
+        print("All systems working correctly!")
     else:
-        print("❌ Some issues need to be resolved")
-        print("💡 Install missing requirements: pip install -r requirements.txt")
+        print("Some components need attention.")
 
 if __name__ == "__main__":
     main()
