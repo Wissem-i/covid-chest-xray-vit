@@ -1,0 +1,28 @@
+Extracted from: Week 1_ Code (1st Parent Paper).pdf
+==================================================
+
+9/13/25, 7:15 PM Week 1: Code (1st Parent Paper)
+Week 1: Code (1st Parent Paper)
+Due Sep 7 by 11:59pm
+Points 30
+Submitting a text entry box, a website url, a media recording, or a file upload
+Available Aug 1 at 12am - Sep 7 at 11:59pm
+This assignment was locked Sep 7 at 11:59pm.
+The 1st phase of implementation requires you to redo what the authors of the parent paper have done.
+You could find the appropriate code on github, on Kaggle, or via search on Database search of Google.
+Some suggestions are made in the announcement sections. Without having the codes, you will be
+required to develop the codes from scratch. So, try to find a paper that is very clear how the
+implementation is done.
+1) Make a github account and upload the codes there. Make the GitHub public so that the TA and I can
+access them.
+2) Provide a recording that shows you have clicked on the code and you have run the code on
+the screen. It must run without an error on the recorded screen.
+Please note I am not asking you to modify the code or write the code from scratch. I am asking you to
+execute the code you have selected from internet. This code will be the basis on which your research
+paper will be based. While you may change the code at a later stage in consultation with the instructor,
+you need to make sure your selected code is working at this stage.
+https://psu.instructure.com/courses/2416232/assignments/17236399?module_item_id=44948180 1/2
+
+9/13/25, 7:15 PM Week 1: Code (1st Parent Paper)
+https://psu.instructure.com/courses/2416232/assignments/17236399?module_item_id=44948180 2/2
+

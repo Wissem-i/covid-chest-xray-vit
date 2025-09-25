@@ -1,0 +1,44 @@
+Extracted from: Week 1_ Online Search + Topic Selection.pdf
+==================================================
+
+9/13/25, 7:14 PM Week 1: Online Search + Topic Selection
+Week 1: Online Search + Topic Selection
+Due Sep 7 by 11:59pm
+Points 100
+Submitting a text entry box, a website url, a media recording, or a file upload
+Available Aug 1 at 12am - Sep 7 at 11:59pm
+This assignment was locked Sep 7 at 11:59pm.
+In this assignment, I am asking you to search the internet and complete the following sections in a
+document.
+1) Keywords: List the keywords you have used to search the internet. You could potentially bundle them
+after the search is over and after the team has met to discuss the results.
+For the following items, no need to write an abstract or start any literature review. I am asking only for
+lists of Links. Nothing more.
+2) List a minimum of five research paper in the area of your interest.
+This is team’s interest(s). This is not individual’s interest.
+Please make sure the links refer to papers that are published after 2022.
+See if the paper has graphs, tables, flowcharts, results and discussions, preferably in the form of
+comparisons between proposed technique and older techniques listed in the paper.
+Preference is given to journal papers over conference papers. But if you have one or two conference
+papers with high quality in the batch of your links, I am OK with that too.
+Note: You are allowed to have only ONE paper from Papers with codes website. This website is not peer
+reviewed. All other papers must be selected from journals that are peer reviewed.
+3) List a minimum of three links to presentations in the area of team interest. These presentations can be
+either in the form of PPT or PDF that originated from a PPT.
+4) Looking at the techniques that authors have used, list a minimum of three youtube clips that discuss
+and address the techniques in relatively simple way. For example, if your interest is using Rainforest
+algorithm, try to provide a link for that so that the team can benefit. If your technique is XGBoost, have
+one link to explain what XGBoost is.
+5) List GitHub or any online repositories that could be your baseline codesets.
+Submit the following two items:
+A document that has the answers to the items 1 to 5 listed above.
+A recording where the group has discussed the outcomes. Please note that each team member can
+do search independently. But there must be a group discussion. The length of this recording is
+https://psu.instructure.com/courses/2416232/assignments/17236401?module_item_id=44948177 1/2
+
+9/13/25, 7:14 PM Week 1: Online Search + Topic Selection
+sometime between 10 min and 20 min. It could be integration of smaller clips if the team so desires.
+Please view the Success Story for this assignment: Success Story: Online Topic Search
+(https://psu.instructure.com/courses/2416232/pages/success-story-online-topic-search)
+https://psu.instructure.com/courses/2416232/assignments/17236401?module_item_id=44948177 2/2
+

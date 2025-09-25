@@ -1,0 +1,20 @@
+Extracted from: Week 1_ Input Data (1st Parent Paper).pdf
+==================================================
+
+9/13/25, 7:15 PM Week 1: Input Data (1st Parent Paper)
+Week 1: Input Data (1st Parent Paper)
+Due Sep 7 by 11:59pm
+Points 10
+Submitting a text entry box, a website url, a media recording, or a file upload
+Available Aug 1 at 12am - Sep 7 at 11:59pm
+This assignment was locked Sep 7 at 11:59pm.
+You need to make sure the paper you have selected has identified clearly where the data is coming
+from. Without having 1st hand access to the data, you will not be able to move to implementation phase.
+Please upload a link to the data set the paper has used. Alternatively, you can upload the data (if it is not
+too large) as a file in this section.
+I encourage creating a GitHub as well as you will upload your materials as you progress in this course.
+https://psu.instructure.com/courses/2416232/assignments/17236400?module_item_id=44948179 1/2
+
+9/13/25, 7:15 PM Week 1: Input Data (1st Parent Paper)
+https://psu.instructure.com/courses/2416232/assignments/17236400?module_item_id=44948179 2/2
+
