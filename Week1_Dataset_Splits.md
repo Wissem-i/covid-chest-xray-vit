@@ -89,7 +89,7 @@ Validation: 1,979 samples (9.9%)
 Train-Test overlap: 0 patients
 Train-Validation overlap: 0 patients
 Test-Validation overlap: 0 patients
-✅ No patient overlap detected - splits are clean!
+No patient overlap detected - splits are clean!
 
 === CLASS DISTRIBUTION ===
 Training:
@@ -137,75 +137,75 @@ This way I can't accidentally peek at the validation set while I'm still develop
 - Protection mechanisms for validation set
 - Comprehensive logging and statistics
 
-#### Generated Output Files:
+# Generated Output Files:
 1. **`data/processed/train_split.csv`** - Training dataset (14,023 samples)
 2. **`data/processed/test_split.csv`** - Test dataset (3,998 samples)  
 3. **`data/processed/validation_split.csv`** - Validation dataset (1,979 samples)
-4. **`data/processed/split_statistics.json`** - Split metadata and statistics
+4. **`data/processed/split_statistics.json`** - Split info and stats
 5. **`data/README.md`** - Documentation of splits and usage
 
-### Validation Rules Enforced
+### Protection Rules I Put In
 
-#### Implemented Protections:
+#### What I Made Sure Of:
 1. **Patient-level splitting** - No patient appears in multiple splits
-2. **Validation set isolation** - Requires explicit confirmation to access
+2. **Validation set isolation** - Need to confirm before accessing
 3. **Access logging** - Tracks when validation set is accessed
-4. **Error handling** - Prevents accidental validation access
-5. **Reproducible splits** - Fixed random seed (42) for consistent results
+4. **Error handling** - Stops accidental validation access
+5. **Same results every time** - Fixed random seed (42) for consistency
 
-#### Execution Log:
+#### What Happened When I Ran It:
 ```
-🏥 NIH Chest X-ray Dataset Splitting
+NIH Chest X-ray Dataset Splitting
 ==================================================
-📊 Loading NIH dataset metadata...
+Loading NIH dataset info...
 Original dataset size: 112,120 images
 After filtering: 89,432 images  
 Balanced dataset size: 20,000 images
 Normal cases: 10,000
 Disease cases: 10,000
 
-🔀 Creating patient-level splits...
+Creating patient-level splits...
 Number of unique patients: 15,847
 
-✅ No patient overlap detected - splits are clean!
-💾 Saving split files...
-🔒 Setting up data protection...
-✅ Dataset splitting completed successfully!
+No patient overlap detected - splits are clean!
+Saving split files...
+Setting up data protection...
+Dataset splitting completed successfully!
 ```
 
-## Submission Checklist
+## What I Need to Check
 
-### Files Created:
-- [x] `data/processed/train_split.csv` - Training dataset (70.1%)
-- [x] `data/processed/test_split.csv` - Test dataset (20.0%)
-- [x] `data/processed/validation_split.csv` - Validation dataset (9.9%)
-- [x] `create_dataset_splits.py` - Complete splitting implementation
-- [x] `data/README.md` - Documentation of splits
-- [x] `data/processed/split_statistics.json` - Verification statistics
+### Files I Made:
+- `data/processed/train_split.csv` - Training dataset (70.1%)
+- `data/processed/test_split.csv` - Test dataset (20.0%)
+- `data/processed/validation_split.csv` - Validation dataset (9.9%)
+- `create_dataset_splits.py` - Complete splitting code
+- `data/README.md` - Documentation of splits
+- `data/processed/split_statistics.json` - Numbers and stats
 
-### Verification:
-- [x] Proportions are correct (70/20/10 ± 1%)
-- [x] No data leakage between sets (patient-level verification)
-- [x] Class distributions are preserved (50/50 Normal/Disease)
-- [x] Random seed is set for reproducibility (seed=42)
-- [x] Validation set is properly protected (access control implemented)
+### Double Checking:
+- Proportions are right (70/20/10 give or take 1%)
+- No data mixing between sets (patient-level check)
+- Class distributions stay the same (50/50 Normal/Disease)
+- Random seed is set so I get same results (seed=42)
+- Validation set is protected (access control works)
 
 ### Documentation:
-- [x] Split method is documented (patient-level stratified)
-- [x] File sizes and statistics are recorded (JSON metadata)
-- [x] Usage instructions are clear (README + inline comments)
-- [x] Protection mechanisms are in place (DataProtection class)
+- Split method is documented (patient-level split)
+- File sizes and stats are saved (JSON file)
+- Instructions are clear (README + comments in code)
+- Protection works (DataProtection class)
 
 ---
 
-**Completion Date:** September 21, 2025
-**Split Method:** Patient-level stratified split (prevents data leakage)
-**Validation Protection:** ✅ Implemented with access control
-**Ready for Model Training:** ✅ Yes
+**Finished:** September 21, 2025
+**Split Method:** Patient-level split (prevents data problems)
+**Validation Protection:** Yes, implemented with access control
+**Ready for Model Training:** Yes
 
-**Verification Notes:**
-- Patient-level splitting ensures no data leakage
+**Notes:**
+- Patient-level splitting makes sure no data leakage
 - Balanced classes prevent bias in model training
 - Validation set protection prevents overfitting to test performance
-- Reproducible splits with fixed random seed
+- Same results every time with fixed random seed
 - Complete documentation for future reference

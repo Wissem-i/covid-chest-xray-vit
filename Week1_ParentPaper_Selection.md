@@ -37,7 +37,7 @@ The paper basically takes the Vision Transformer architecture (originally design
 - EfficientNet-B4
 - Various CNN architectures with transfer learning
 
-### Implementation Feasibility
+### Can I Actually Do This?
 
 **Code Availability:**
 Authors provide code in supplementary materials
@@ -57,18 +57,18 @@ CheXpert dataset requires free registration
 ### Rationale for Selection
 
 **Why this paper?**
-1. **Clear methodology and reproducible approach** - Detailed experimental setup with hyperparameters
-2. **Dataset is publicly available and accessible** - NIH Chest X-ray dataset freely downloadable
-3. **Recent publication with state-of-the-art results** - 2023 publication showing significant improvements
-4. **Code and implementations are available** - Multiple GitHub repositories with ViT medical imaging code
-5. **High clinical and social impact** - Medical diagnosis with practical applications
-6. **Strong baseline comparisons** - Comprehensive evaluation against multiple CNN architectures
+1. **Clear method and I can follow it** - Good experimental setup with details on settings
+2. **Dataset I can download for free** - NIH Chest X-ray dataset is available online
+3. **Recent paper with good results** - 2023 paper showing big improvements
+4. **Code is available** - Multiple GitHub repos with ViT medical imaging code
+5. **Important for helping people** - Medical diagnosis with real-world uses
+6. **Good comparisons with other models** - Tests against multiple CNN types
 
-**Research Questions to Explore:**
-1. How does Vision Transformer performance compare to CNN on smaller chest X-ray datasets?
-2. Can we improve the model's accuracy with advanced data augmentation techniques?
-3. How do different Vision Transformer variants (ViT-S, ViT-B, ViT-L) perform on medical imaging?
-4. Can we achieve better interpretability by analyzing attention patterns?
+**Questions I Want to Look At:**
+1. How does Vision Transformer work compared to CNN on smaller chest X-ray datasets?
+2. Can I improve accuracy with better data techniques?
+3. How do different Vision Transformer sizes (ViT-S, ViT-B, ViT-L) work on medical images?
+4. Can I understand what the model is looking at by studying attention?
 
 ### Alternative Papers Considered
 
