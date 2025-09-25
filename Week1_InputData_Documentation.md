@@ -2,12 +2,12 @@
 
 ## Dataset I'm Using
 
-**Dataset Name:** COVID-19 Chest X-ray Dataset (IEEE8023)
+**Dataset Name:** COVID-19 Chest X-ray Dataset
 
 **Where to get it:** https://github.com/ieee8023/covid-chestxray-dataset
 
 **What it contains:** 
-- About 930 chest X-ray images (~500MB total)
+- About 930 chest X-ray images
 - From multiple medical institutions globally
 - Both PA and AP view chest X-rays
 - All images are in PNG/JPG format
@@ -18,7 +18,7 @@
 The images are chest X-rays from patients with COVID-19, pneumonia, and other respiratory conditions. Each image has metadata including the diagnosis, patient age, sex, and other clinical information.
 
 **What makes this good for my project:**
-- Small size (500MB vs 45GB) - I can actually download and work with this locally
+- Small size - I can actually download and work with this locally
 - Has COVID-19 labels which is perfect for my research paper
 - Other researchers have used it so I know it works
 - Free to download from GitHub

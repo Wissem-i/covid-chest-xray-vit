@@ -37,13 +37,12 @@
 
 ## Dataset I'm Using (Better Choice!)
 
-**COVID-19 Chest X-ray Dataset (IEEE8023)**
-- **Size:** 930 images (~500MB) instead of 45GB NIH dataset
+**COVID-19 Chest X-ray Dataset**
+- **Size:** About 930 chest X-ray images
 - **Source:** https://github.com/ieee8023/covid-chestxray-dataset  
-- **Why better:** Actually downloadable, runs locally, perfect for learning
+- **Why I picked this:** Way more manageable than the huge NIH dataset, still good for research
 
-**Original plan was too ambitious:** NIH dataset (45GB, 112k images)  
-**Smarter approach:** COVID dataset (500MB, 930 images)
+**My thinking:** The original NIH dataset was way too big to actually work with, so I found this smaller COVID dataset that's perfect for learning Vision Transformers.
 
 ## Current Status
 
@@ -61,22 +60,22 @@
 
 ## Why This Is Actually Better
 
-**Problems with original 45GB dataset:**
-- Would take days to download on student internet
-- Needs expensive cloud computing or high-end hardware
-- Too big to actually work with for learning
+**Problems with the original big dataset:**
+- Would take forever to download
+- Need really expensive computers to run it
+- Too overwhelming for learning
 
-**Advantages of 500MB dataset:**
-- Downloads in minutes
-- Runs on regular laptop
-- Still challenging and research-relevant  
-- Perfect size for understanding Vision Transformers
-- COVID detection is high-impact research area
+**Why the smaller dataset works better:**
+- Downloads quickly
+- Runs on my laptop
+- Still challenging and interesting
+- Perfect for understanding Vision Transformers
+- COVID detection is important research
 
 ## Recording Plan
 
 My screen recording will show:
-1. **Download**: Getting the COVID dataset (500MB - actually doable!)
+1. **Download**: Getting the COVID dataset - way smaller and manageable!
 2. **Setup**: Installing requirements and dependencies
 3. **Data Processing**: Running my splitting script
 4. **Training**: Vision Transformer training in action
