@@ -1,0 +1,27 @@
+{
+  "dataset_type": "COVID-19",
+  "dataset_path": "covid-chestxray-dataset",
+  "total_samples": 334,
+  "train_samples": 230,
+  "test_samples": 52,
+  "validation_samples": 52,
+  "split_ratios": {
+    "train": "68.9%",
+    "test": "15.6%",
+    "validation": "15.6%"
+  },
+  "class_distribution": {
+    "train": {
+      "Pneumonia": 121,
+      "COVID-19": 109
+    },
+    "test": {
+      "COVID-19": 29,
+      "Pneumonia": 23
+    },
+    "validation": {
+      "COVID-19": 29,
+      "Pneumonia": 23
+    }
+  }
+}
