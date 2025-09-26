@@ -181,8 +181,6 @@ The `demo_covid_vit.py` script demonstrates:
 
 ---
 
-<<<<<<< HEAD
-**Repository:** https://github.com/Wissem-i/covid-chest-xray-vit  
 **Individual Project** - Computer Vision/Machine Learning Course
 =======
 **Repository**: https://github.com/Wissem-i/covid-chest-xray-vit
@@ -215,7 +213,8 @@ Week 1 Assignment - Code ImplementationThis tool creates proper train/test/valid
 
 
 
-**COVID-19 Chest X-ray Dataset**### 1. Download COVID-19 Dataset
+**COVID-19 Chest X-ray Dataset**
+### 1. Download COVID-19 Dataset
 
 - **Source**: [ieee8023/covid-chestxray-dataset](https://github.com/ieee8023/covid-chestxray-dataset)
 
@@ -399,12 +398,6 @@ The code is designed to run on modest hardware:pip install pandas scikit-learn
 
 This tool is designed for academic and research use with the COVID-19 chest X-ray dataset. Please refer to the original dataset license at https://github.com/ieee8023/covid-chestxray-dataset
 
-## 📈 Expected Results
-
-Based on the research paper and our implementation:
-- **Training Accuracy**: ~85%+
-- **Validation Accuracy**: ~75%+
-- **Training Time**: 5-30 minutes depending on hardware
 
 ## 🔍 Code Features
 
@@ -418,5 +411,4 @@ Based on the research paper and our implementation:
 
 **Student**: Individual project submission  
 **Course**: Computer Vision/Machine Learning  
-**Assignment**: Week 1 - Code Implementation (30 points)
->>>>>>> a95f40f8cb0773ef39665388881ea9d49d37bb20
+
