@@ -404,9 +404,5 @@ This tool is designed for academic and research use with the COVID-19 chest X-ra
 - **Reproducibility**: Fixed random seeds for consistent results
 - **Documentation**: Comprehensive code comments and docstrings
 
----
-
-**Student**: Individual project submission  
-**Course**: Computer Vision/Machine Learning  
 
 
