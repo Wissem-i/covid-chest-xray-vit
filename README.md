@@ -12,7 +12,6 @@ Implementation of Vision Transformer for COVID-19 chest X-ray classification usi
 
 ### 1. Clone Repository and Install Dependencies
 
-<<<<<<< HEAD
 ```bash
 git clone https://github.com/Wissem-i/covid-chest-xray-vit.git
 cd covid-chest-xray-vit
@@ -28,9 +27,9 @@ cd covid-chest-xray-vit
 
 - **Source:** [ieee8023/covid-chestxray-dataset](https://github.com/ieee8023/covid-chestxray-dataset)- ✅ **Error-Free Execution**: Code runs successfully as demonstrated
 
-- **Classes:** COVID-19 vs Pneumonia (binary classification)- ✅ **Based on Research**: Implements ViT architecture for medical imaging
+- **Classes:** COVID-19 vs Pneumonia (binary classification)- **Based on Research**: Implements ViT architecture for medical imaging
 
-- ✅ **Manageable Dataset**: Uses 930-image COVID dataset for local development
+-  **Manageable Dataset**: Uses 930-image COVID dataset for local development
 
 ## Quick Start
 
@@ -182,10 +181,6 @@ The `demo_covid_vit.py` script demonstrates:
 ---
 
 **Individual Project** - Computer Vision/Machine Learning Course
-=======
-**Repository**: https://github.com/Wissem-i/covid-chest-xray-vit
-**Assignment**: Week 1 - Code Implementation (30 points)
-**Status**: ✅ Complete and ready for submission# COVID-19 Chest X-ray Dataset Splitting Tool
 
 
 
@@ -209,7 +204,8 @@ Week 1 Assignment - Code ImplementationThis tool creates proper train/test/valid
 
 
 
-## 📊 Dataset## Quick Start
+## 📊 Dataset
+## Quick Start
 
 
 
@@ -226,7 +222,8 @@ Week 1 Assignment - Code ImplementationThis tool creates proper train/test/valid
 
 
 
-## 🚀 Quick Start### 2. Run Dataset Splitting
+## 🚀 Quick Start
+### 2. Run Dataset Splitting
 
 
 
@@ -364,21 +361,21 @@ val_data = loader.get_validation_data()  # ❌ Access denied
 
 **Original Plan**: NIH ChestX-ray14 Dataset (45GB, 112k images)  The tool performs comprehensive verification:
 
-**Better Choice**: COVID-19 Dataset (500MB, 930 images)- ✅ Split ratios (~70/15/15)
+**Better Choice**: COVID-19 Dataset (500MB, 930 images)-  Split ratios (~70/15/15)
 
-- ✅ No patient overlap between splits  
+-  No patient overlap between splits  
 
-**Advantages**:- ✅ Balanced class distribution
+**Advantages**:-  Balanced class distribution
 
-- ✅ **Actually downloadable** on student budget/internet- ✅ Data access protection
+-  **Actually downloadable** on student budget/internet-  Data access protection
 
-- ✅ **Runs locally** without cloud computing costs- ✅ File integrity
+-  **Runs locally** without cloud computing costs-  File integrity
 
-- ✅ **Perfect for learning** - results in reasonable time
+-  **Perfect for learning** - results in reasonable time
 
-- ✅ **Still challenging** - medical imaging with class imbalanceRun `python test_dataset_splits.py` to verify everything works correctly.
+-  **Still challenging** - medical imaging with class imbalanceRun `python test_dataset_splits.py` to verify everything works correctly.
 
-- ✅ **Research relevant** - COVID detection is high impact
+-  **Research relevant** - COVID detection is high impact
 
 ## Requirements
 
@@ -411,4 +408,5 @@ This tool is designed for academic and research use with the COVID-19 chest X-ra
 
 **Student**: Individual project submission  
 **Course**: Computer Vision/Machine Learning  
+
 
