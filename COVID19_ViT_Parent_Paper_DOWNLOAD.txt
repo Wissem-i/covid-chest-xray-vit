@@ -1,0 +1,29 @@
+COVID-19 ViT PARENT PAPER DOWNLOAD INSTRUCTIONS
+===============================================
+
+Paper Title: "COVID-19 Chest X-ray Dataset: A Multi-Label Classification Dataset"
+Authors: Joseph Paul Cohen, Paul Morrison, Lan Dao, et al.
+Publication Year: 2020 (Updated continuously, latest version 2023)
+
+DOWNLOAD LINKS:
+- ArXiv Paper: https://arxiv.org/abs/2003.11597  
+- Direct PDF: https://arxiv.org/pdf/2003.11597.pdf
+- IEEE Dataport: https://ieee-dataport.org/open-access/covid-19-chest-x-ray-dataset
+
+DOWNLOAD INSTRUCTIONS:
+1. Visit: https://arxiv.org/pdf/2003.11597.pdf
+2. Save the PDF file as: COVID19_ViT_Parent_Paper.pdf
+3. Place it in this directory (same folder as this file)
+
+VERIFICATION:
+- File should be named exactly: COVID19_ViT_Parent_Paper.pdf
+- Expected file size: ~1-2MB
+- Run: python verify_dataset.py (to check completion)
+
+NOTE: The PDF file is excluded from git commits via .gitignore
+      This ensures the repository stays lightweight while providing
+      clear instructions for obtaining the required paper.
+
+STATUS: ⚠️ MANUAL DOWNLOAD REQUIRED
+The paper must be downloaded manually due to network restrictions.
+All other requirements (dataset, code) are complete and ready.
