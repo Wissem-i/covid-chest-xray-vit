@@ -1,7 +1,7 @@
 {
   "github.copilot.chat.welcomeMessage": "always",
   "chat.models.provider": "github",
-  "github.copilot.selectedCompletionModel": "claude-3.7-sonnet",
+  "github.copilot.selectedCompletionModel": "claude-sonnet-4",
   "github.copilot.chat.models": [
     "gpt-4o",
     "gpt-4o-mini",
@@ -13,6 +13,8 @@
     "claude-3.7-sonnet",
     "claude-3.7-sonnet-thinking",
     "claude-3-opus",
+    "claude-sonnet-4",
+    "claude-opus-4",
     "gemini-2.0-flash"
   ]
 }
